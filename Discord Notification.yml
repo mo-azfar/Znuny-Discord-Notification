@@ -1,0 +1,66 @@
+---
+Debugger:
+  DebugThreshold: debug
+  TestMode: '0'
+Description: ''
+FrameworkVersion: 7.0.3
+Provider:
+  Transport:
+    Config: {}
+    Type: ''
+RemoteSystem: ''
+Requester:
+  Invoker:
+    Owner Update:
+      Description: ''
+      Events: []
+      GetAllArticleAttachments: '0'
+      MappingOutbound:
+        Config:
+          DataInclude: []
+          ForceArray: embeds
+          KeepAttributes: ''
+          PostRegExFilter: ~
+          PostRegExValueCounter: ~
+          PreRegExFilter: ~
+          PreRegExValueCounter: ~
+          Template: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<xsl:transform
+            version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:date=\"http://exslt.org/dates-and-times\"
+            extension-element-prefixes=\"date\">\r\n    <xsl:output method=\"xml\"
+            encoding=\"utf-8\" indent=\"yes\"/>\r\n    <xsl:template match=\"RootElement\">\r\n
+            \       <xsl:copy>\r\n            <ChannelID><xsl:value-of select=\"//Recipient/UserDiscordChannelID\"
+            /></ChannelID>\r\n            <content>Hi&#x20;<xsl:value-of select=\"//Recipient/UserFullname\"
+            /></content>\r\n            <embeds>\r\n                <type>rich</type>\r\n
+            \               <title>Ticket#<xsl:value-of select=\"//Event/TN\" />&#x20;<xsl:value-of
+            select=\"//Ticket/TicketNumber\" />&#x20;- Owner Update</title>\r\n                <url>&lt;OTRS_CONFIG_HttpType&gt;://&lt;OTRS_CONFIG_FQDN&gt;/&lt;OTRS_CONFIG_ScriptAlias&gt;index.pl?Action=AgentTicketZoom;TicketID=<xsl:value-of
+            select=\"//Ticket/TicketID\" /></url>\r\n                <color>4321431</color>\r\n
+            \               <fields>\r\n                    <name>Type</name>\r\n
+            \                   <value><xsl:value-of select=\"//Ticket/Type\" /></value>\r\n
+            \                   <inline>true</inline>\r\n                </fields>\r\n
+            \               <fields>\r\n                    <name>Queue</name>\r\n
+            \                   <value><xsl:value-of select=\"//Ticket/Queue\" /></value>\r\n
+            \                   <inline>true</inline>\r\n                </fields>\r\n
+            \               <fields>\r\n                    <name>Owner</name>\r\n
+            \                   <value><xsl:value-of select=\"//Ticket/OwnerData/UserFullname\"
+            /></value>\r\n                    <inline>true</inline>\r\n                </fields>\r\n
+            \               <fields>\r\n                    <name>Title</name>\r\n
+            \                   <value><xsl:value-of select=\"//Ticket/Title\" /></value>\r\n
+            \                   <inline>true</inline>\r\n                </fields>\r\n
+            \           </embeds>\r\n        </xsl:copy>\r\n    </xsl:template>\r\n</xsl:transform>"
+        Type: XSLT
+      Type: Ticket::Generic
+  Transport:
+    Config:
+      AdditionalHeaders:
+        Authorization: Bot <DISCORD_BOT_TOKEN>
+        User_Agent: DiscordBot
+      ContentType: JSON
+      DefaultCommand: POST
+      Host: https://discord.com/api/v10/channels
+      InvokerControllerMapping:
+        Owner Update:
+          Command: POST
+          Controller: /:ChannelID/messages
+      SSLNoHostnameVerification: '0'
+      Timeout: '30'
+    Type: HTTP::REST

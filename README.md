@@ -33,7 +33,7 @@ b) For know, step 1 should be enough.
 
 6. a) Obtain the Discord ID for the users
 
-- Click USer Setting.  
+- Click User Setting.  
 - Click the more icon "..."  
 - Click on "Copy User ID."  
 
@@ -54,3 +54,5 @@ b) For know, step 1 should be enough.
 			-- Anything as the actual value is set from XSLT itself.
 			
 8. **Make sure the Discord User is within same channel as Discord Bot.
+
+![discord-dm](https://i.postimg.cc/Nj6NxzR5/discord-dm.png)
