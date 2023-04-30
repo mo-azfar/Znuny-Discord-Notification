@@ -6,7 +6,8 @@
 		- For others kind of notification, kindly create another Invoker. You may refer existing invoker (Owner Update) and existing HTTP::REST Configuration.
 
 
-1. Create a Discord App and configure a bot. Reference: https://discord.com/developers/docs/getting-started#step-1-creating-an-app
+1. Create a Discord App and configure a bot. 
+   Reference: https://discord.com/developers/docs/getting-started#step-1-creating-an-app
 
 a) **Take a note of bot token. e.g: abcdefghijklmn123456789
 b) For know, step 1 should be enough.
