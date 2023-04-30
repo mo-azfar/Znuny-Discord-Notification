@@ -10,9 +10,9 @@
    
    Reference: https://discord.com/developers/docs/getting-started#step-1-creating-an-app
 
-a) **Take a note of bot token. e.g: abcdefghijklmn123456789**
+	a) **Take a note of bot token. e.g: abcdefghijklmn123456789**
 
-b) For know, step 1 should be enough.
+	b) For know, step 1 should be enough.
 
 
 2. Import the 'Discord Notification.yml' via Admin > Web Services.
