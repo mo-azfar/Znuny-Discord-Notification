@@ -32,8 +32,8 @@
 
 5. Import discord.pl at at $OTRS_HOME/scripts/ and assign proper permission and update bot token
 
-(-) Authorization => 'Bot <DISCORD_BOT_TOKEN>',
-(+) Authorization => 'Bot abcdefghijklmn123456789',
+		(-) Authorization => 'Bot <DISCORD_BOT_TOKEN>',
+		(+) Authorization => 'Bot abcdefghijklmn123456789',
 
 6. a) Obtain the Discord ID for the users
 
