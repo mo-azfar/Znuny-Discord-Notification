@@ -5,7 +5,7 @@
 		- This is only for Notification Owner Update.
 		- For others kind of notification, kindly create another Invoker. You may refer existing invoker (Owner Update) and existing HTTP::REST Configuration.
 		- For the sake of simplicity, we will use perl script to open a channel ID with Discord instead using webservice.
-		- OTRS / Znuny webservices will use this opened Channel ID to send the DM Notification to the users via webservice.
+		- OTRS / Znuny will use this opened Channel ID to send the DM Notification to the users via webservice.
 
 ***
 1. Create a Discord App and configure a bot. 
@@ -31,7 +31,7 @@
 ***
 4. Import and deploy ZZZAgentDiscord.xml at $OTRS_HOME/Kernel/Config/Files/XML/
 ***
-5. Import discord.pl at at $OTRS_HOME/scripts/ and assign proper permission and update bot token
+5. Import discord.pl at at $OTRS_HOME/scripts/ and assign proper permission and update bot token (1a)
 
 		(-) Authorization => 'Bot <DISCORD_BOT_TOKEN>',
 		(+) Authorization => 'Bot abcdefghijklmn123456789',
@@ -45,8 +45,9 @@
 	b) execute discord.pl	
 	
 		- this scripts will open an DM channel between bot and selected agent.
+		- this scripts will update agent personal preferences -> Miscellaneous > User Discord Channel ID field with Discord Channel ID value.
 		- you need to enter Discord User ID obtained from 6(a) above.
-		- this scripts later will update agent preferences with Channel ID.
+		- this script only need to run once per agents / users.
 ***	
 7. Create a new Ticket Notification  
 
