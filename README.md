@@ -7,6 +7,7 @@
 
 
 1. Create a Discord App and configure a bot. 
+   
    Reference: https://discord.com/developers/docs/getting-started#step-1-creating-an-app
 
 a) **Take a note of bot token. e.g: abcdefghijklmn123456789
