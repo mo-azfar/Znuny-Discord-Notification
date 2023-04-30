@@ -1,5 +1,5 @@
 # Znuny-Discord-Notification
-- Znuny-Ticket-Notification-To-Discord-Users Via Webservices
+- Znuny ticket notification to Discord users via webservices
 - Required at least Znuny LTS / Znuny Features
 
 		- This is only for Notification Owner Update.
