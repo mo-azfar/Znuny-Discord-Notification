@@ -37,14 +37,14 @@
 
 6. a) Obtain the Discord ID for the users
 
-- Click User Setting.  
-- Click the more icon "..."  
-- Click on "Copy User ID."  
+		- Click User Setting.  
+		- Click the more icon "..."  
+		- Click on "Copy User ID."  
 
-	a) execute discord.pl	
+	b) execute discord.pl	
 	
-	- this scripts will open an DM channel between bot and Discord User ID.
-	- this scripts will update agent preferences with Channel ID.
+		- this scripts will open an DM channel between bot and Discord User ID.
+		- this scripts will update agent preferences with Channel ID.
 	
 7. Create a new Ticket Notification  
 
