@@ -14,8 +14,11 @@
 
 	b) For know, step 1 should be enough.
 
+***
 
 2. Import the 'Discord Notification.yml' via Admin > Web Services.
+
+***
 
 3. Update the Discord Bot Token (1a) at the created webservice.
 
@@ -27,14 +30,14 @@
 
 	c) Save and finish
 	
-
+***
 4. Import and deploy ZZZAgentDiscord.xml at $OTRS_HOME/Kernel/Config/Files/XML/
-
+***
 5. Import discord.pl at at $OTRS_HOME/scripts/ and assign proper permission and update bot token
 
 		(-) Authorization => 'Bot <DISCORD_BOT_TOKEN>',
 		(+) Authorization => 'Bot abcdefghijklmn123456789',
-
+***
 6. a) Obtain the Discord ID for the users
 
 		- Click User Setting.  
@@ -45,7 +48,7 @@
 	
 		- this scripts will open an DM channel between bot and Discord User ID.
 		- this scripts will update agent preferences with Channel ID.
-	
+***	
 7. Create a new Ticket Notification  
 
 		- Event: NotificationOwnerUpdate
@@ -56,7 +59,7 @@
 		
 		- Notification Body and Text
 			-- Anything as the actual value is set from XSLT itself.
-			
-8. **Make sure the Discord User is within same channel as Discord Bot.
+***			
+8. **Make sure the Discord User is within same channel as Discord Bot.**
 
 ![discord-dm](https://i.postimg.cc/Nj6NxzR5/discord-dm.png)
