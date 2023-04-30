@@ -42,8 +42,9 @@
 
 	b) execute discord.pl	
 	
-		- this scripts will open an DM channel between bot and Discord User ID.
-		- this scripts will update agent preferences with Channel ID.
+		- this scripts will open an DM channel between bot and selected agent.
+		- you need to enter Discord User ID obtained from 6(a) above.
+		- this scripts later will update agent preferences with Channel ID.
 ***	
 7. Create a new Ticket Notification  
 
