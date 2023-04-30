@@ -34,7 +34,7 @@
 		(-) Authorization => 'Bot <DISCORD_BOT_TOKEN>',
 		(+) Authorization => 'Bot abcdefghijklmn123456789',
 ***
-6. a) Obtain the Discord ID for the users
+6. a) Obtain the Discord ID for the users from Discord App
 
 		- Click User Setting.  
 		- Click the more icon "..."  
