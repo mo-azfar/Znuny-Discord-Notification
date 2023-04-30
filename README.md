@@ -4,6 +4,8 @@
 
 		- This is only for Notification Owner Update.
 		- For others kind of notification, kindly create another Invoker. You may refer existing invoker (Owner Update) and existing HTTP::REST Configuration.
+		- For the sake of simplicity, we will use perl script to open a channel ID with Discord instead using webservice.
+		- OTRS / Znuny webservices will use this opened Channel ID to send the DM Notification to the users via webservice.
 
 ***
 1. Create a Discord App and configure a bot. 
